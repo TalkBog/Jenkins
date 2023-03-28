@@ -3,11 +3,13 @@ package ex_deux_test;
 import ex_deux.Account;
 import ex_deux.Bank;
 import org.junit.Assert;
+import org.junit.Test;
 import org.junit.jupiter.params.provider.MethodSource;
 
 public class BankTest {
 
     @MethodSource
+    @Test
     public void AddTest(){
         Bank bank = new Bank();
         Assert.assertEquals(0,bank.getAccounts().size());
@@ -17,6 +19,7 @@ public class BankTest {
     }
 
     @MethodSource
+    @Test
     public void RemoveTest(){
         Bank bank = new Bank();
         Account account = new Account(0,200,10);
@@ -26,6 +29,7 @@ public class BankTest {
     }
 
     @MethodSource
+    @Test
     public void TransfertTest(){
         Bank bank = new Bank();
         Account account = new Account(0,200,10);

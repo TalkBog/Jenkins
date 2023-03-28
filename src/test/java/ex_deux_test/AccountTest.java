@@ -2,10 +2,12 @@ package ex_deux_test;
 
 import ex_deux.Account;
 import org.junit.Assert;
+import org.junit.Test;
 import org.junit.jupiter.params.provider.MethodSource;
 
 public class AccountTest {
     @MethodSource
+    @Test
     public void SetGetTest(){
         Account account = new Account(0,200,10);
         Assert.assertEquals(0, account.getId());
@@ -16,6 +18,7 @@ public class AccountTest {
     }
 
     @MethodSource
+    @Test
     public void DepotRetraitTest(){
         Account account = new Account(0,200,10);
         account.depot(100);
@@ -25,6 +28,7 @@ public class AccountTest {
     }
 
     @MethodSource
+    @Test
     public void TransfertTest(){
         Account account = new Account(0,200,10);
         Account account2 = new Account(1,50,5);
@@ -34,6 +38,7 @@ public class AccountTest {
     }
 
     @MethodSource
+    @Test
     public void InteretTest(){
         Account account = new Account(0,100,5);
         Assert.assertEquals(5,account.interet());
