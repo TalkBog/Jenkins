@@ -1,6 +1,5 @@
-package ex_deux_test;
+package ex_deux;
 
-import ex_deux.Account;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.params.provider.MethodSource;
