@@ -9,7 +9,9 @@ public class Bank {
     public Bank() {
         accounts = new ArrayList<>();
     }
-
+    public List<Account> getAccounts() {
+        return accounts;
+    }
     public void addAccount(Account account){
         accounts.add(account);
     }
