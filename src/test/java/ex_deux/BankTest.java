@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 public class BankTest {
 
-    @MethodSource
     @Test
     public void AddTest(){
         Bank bank = new Bank();
@@ -16,7 +15,6 @@ public class BankTest {
         Assert.assertEquals(1,bank.getAccounts().size());
     }
 
-    @MethodSource
     @Test
     public void RemoveTest(){
         Bank bank = new Bank();
@@ -26,7 +24,6 @@ public class BankTest {
         Assert.assertEquals(0,bank.getAccounts().size());
     }
 
-    @MethodSource
     @Test
     public void TransfertTest(){
         Bank bank = new Bank();
