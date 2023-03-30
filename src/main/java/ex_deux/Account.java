@@ -34,7 +34,7 @@ public class Account {
         retrait(montant);
         account.depot(montant);
     }
-    public int interet(){
-        return solde * (taux/100);
+    public double interet(){
+        return (solde * ((double)taux/100));
     }
 }
