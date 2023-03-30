@@ -28,14 +28,14 @@ class AccountTest {
         Account account = new Account(0,200,10);
         Account account2 = new Account(1,50,5);
         account.transfert(50,account2);
-        Assertions.assertEquals(100, account.getSolde());
+        Assertions.assertEquals(150, account.getSolde());
         Assertions.assertEquals(100, account2.getSolde());
     }
 
     @Test
     void InteretTest(){
-        Account account = new Account(0,100,5);
-        Assertions.assertEquals(5,account.interet());
+        Account account = new Account(0,100,10);
+        Assertions.assertEquals(10,account.interet());
     }
 
 }
