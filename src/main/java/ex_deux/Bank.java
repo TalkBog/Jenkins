@@ -2,9 +2,12 @@ package ex_deux;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.logging.log4j.*;
 
 
 public class Bank {
+    private static final Logger logger = LogManager.getLogger(Bank.class);
+
     private List<Account> accounts;
 
     public Bank() {
@@ -24,7 +27,7 @@ public class Bank {
     public void afficherSoldes(){
         for(Account account : accounts){
             String str = account.getId() + " : " + account.getSolde();
-            System.out.println(str);
+            logger.info(str);
         }
     }
 
