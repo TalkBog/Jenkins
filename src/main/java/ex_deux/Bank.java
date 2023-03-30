@@ -26,7 +26,8 @@ public class Bank {
 
     public void afficherSoldes(){
         for(Account account : accounts){
-            logger.info(account.getId() + " : " + account.getSolde());
+            String str = account.getId() + " : " + account.getSolde();
+            logger.info(str);
         }
     }
 

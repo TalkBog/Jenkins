@@ -1,39 +1,37 @@
-package ex_deuxTest;
-
 import ex_deux.Account;
 import ex_deux.Bank;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-public class BankTest {
+class BankTest {
 
     @Test
-    public void AddTest(){
+    void AddTest(){
         Bank bank = new Bank();
-        Assert.assertEquals(0,bank.getAccounts().size());
+        Assertions.assertEquals(0,bank.getAccounts().size());
         Account account = new Account(0,200,10);
         bank.addAccount(account);
-        Assert.assertEquals(1,bank.getAccounts().size());
+        Assertions.assertEquals(1,bank.getAccounts().size());
     }
 
     @Test
-    public void RemoveTest(){
+    void RemoveTest(){
         Bank bank = new Bank();
         Account account = new Account(0,200,10);
         bank.addAccount(account);
         bank.removeAccount(account);
-        Assert.assertEquals(0,bank.getAccounts().size());
+        Assertions.assertEquals(0,bank.getAccounts().size());
     }
 
     @Test
-    public void TransfertTest(){
+    void TransfertTest(){
         Bank bank = new Bank();
         Account account = new Account(0,200,10);
         Account account2 = new Account(0,500,5);
         bank.addAccount(account);
         bank.addAccount(account2);
         bank.transfert(account,account2,100);
-        Assert.assertEquals(100,account.getSolde());
-        Assert.assertEquals(600,account2.getSolde());
+        Assertions.assertEquals(100,account.getSolde());
+        Assertions.assertEquals(600,account2.getSolde());
     }
 }
