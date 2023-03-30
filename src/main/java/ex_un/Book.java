@@ -5,9 +5,9 @@ import java.util.Date;
 public class Book {
     private String title;
     private String author;
-    private Date date;
+    private String date;
 
-    public Book(String title, String author, Date date) {
+    public Book(String title, String author, String date) {
         this.title = title;
         this.author = author;
         this.date = date;
@@ -29,11 +29,11 @@ public class Book {
         this.author = author;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }

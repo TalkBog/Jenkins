@@ -1,3 +1,5 @@
+package ex_deuxTests;
+
 import ex_deux.Account;
 import org.junit.jupiter.api.Assertions;
 
